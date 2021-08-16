@@ -26,3 +26,7 @@ Route.get('/', async ({ view }) => {
 
 Route.post('register', 'UsersController.register');
 Route.post('login', 'UsersController.login');
+Route.get('fetchUsers', 'UsersController.fetchUsers');
+
+Route.post('storeAccount', 'AccountsController.storeAccount');
+Route.get('fetchUserAccounts', 'AccountsController.fetchUserAccounts');

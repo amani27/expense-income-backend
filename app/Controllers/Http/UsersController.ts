@@ -10,8 +10,7 @@ export default class UsersController {
             let data = ctx.request.all()
             let user = await User.create({ email: data.email, password: data.password });
 
-            ctx.session.flash({ notification: 'User created successfully!' });
-            return ctx.response.statusgit (200).send(user);
+            return ctx.response.status(200).send(user);
         } catch (error) {
             return ctx.response.status(422).send({ message: error.message });
         }
