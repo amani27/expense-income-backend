@@ -17,10 +17,10 @@ export default class AccountsController {
 
     public async fetchUserAccounts(ctx) {
         try {
-            // let user = await ctx.auth.use('web').authenticate()
-            // let userId = user.id
+            let user = await ctx.auth.use('web').authenticate()
+            let userId = user.id
 
-            let accounts = await Account.query().where('user_id', 1)
+            let accounts = await Account.query().where('user_id', userId)
 
             console.log(accounts)
             return ctx.response.status(200).send(accounts);

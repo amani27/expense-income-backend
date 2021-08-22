@@ -28,5 +28,6 @@ Route.post('register', 'UsersController.register');
 Route.post('login', 'UsersController.login');
 Route.get('fetchUsers', 'UsersController.fetchUsers');
 
+
 Route.post('storeAccount', 'AccountsController.storeAccount');
-Route.get('fetchUserAccounts', 'AccountsController.fetchUserAccounts');
+Route.get('fetchUserAccounts', 'AccountsController.fetchUserAccounts').middleware('auth');
