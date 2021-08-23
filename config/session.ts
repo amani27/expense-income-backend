@@ -86,6 +86,8 @@ const sessionConfig: SessionConfig = {
   */
   cookie: {
     path: '/',
+    domain: 'http://127.0.0.1:8000/',
+    secure: true,
     httpOnly: true,
     sameSite: false,
   },
